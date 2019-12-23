@@ -1,17 +1,16 @@
 #include <iostream>
 #include <stack>
-
+#include <unistd.h>
 using namespace std;
 stack<int> data;
     void display()
     {
-
-        cout<<" The Stack now is : \n";
-        cout<<" |   | "<<endl;
         if (data.empty()) {
             cout << "The Stack is Empty \n";
             return;
         }
+        cout<<" The Stack now is : \n";
+        cout<<" |   | "<<endl;
         while(!data.empty())
         {
             cout<<" ----- "<<endl;
@@ -21,6 +20,7 @@ stack<int> data;
             data.pop();
         }
         cout<<"\n";
+        usleep(100000);
     }
     int main() {
 
